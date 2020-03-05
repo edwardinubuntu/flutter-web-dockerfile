@@ -9,10 +9,12 @@ RUN apt-get clean
 # Clone the flutter repo
 RUN git clone https://github.com/flutter/flutter.git /usr/local/flutter
 
-# Run flutter doctor and set path
-RUN /usr/local/flutter/bin/flutter doctor -v
+# Set flutter path
+# RUN /usr/local/flutter/bin/flutter doctor -v
 ENV PATH="/usr/local/flutter/bin:/usr/local/flutter/bin/cache/dart-sdk/bin:${PATH}"
 
+# Run flutter doctor
+RUN flutter doctor -v
 # Enable flutter web
 RUN flutter channel master
 RUN flutter upgrade
