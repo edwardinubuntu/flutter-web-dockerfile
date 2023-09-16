@@ -19,3 +19,6 @@ docker run -d -p 1200:80 --name myanimate myanimate-web
 ```
 
 Here we go, open browser and go to http://localhost:1200/
+
+# About the Dockerfile
+In the Dockerfile line 15 checkout flutter specific version 3.13.0, and in a future we can continuous maintain and upgrade to the latest / stable or any desired version.
